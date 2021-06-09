@@ -61,9 +61,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(tasks.size() > 0)
                 {
-                    Integer index = Integer.parseInt(etTask.getText().toString());
-                    if(index < tasks.size())
+                    if(tasks.size() == 0)
                     {
+                        Integer index = Integer.parseInt(etTask.getText().toString());
                         tasks.remove(index);
                         AA.notifyDataSetChanged();
                     }
